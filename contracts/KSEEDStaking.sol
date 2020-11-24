@@ -162,7 +162,6 @@ contract KSEEDStakingContract is ERC20 {
   function getReward() public updateStakingReward(msg.sender) {
     uint256 reward = _stakedBalances[msg.sender].rewards;
     _stakedBalances[msg.sender].rewards = 0;
-    // _mint(msg.sender, reward.mul(8) / 10);
     JaguarToken.safeTransfer(msg.sender, reward.mul(8) / 10);
     uint256 fundingPoolReward = reward.mul(2) / 10;
     _mint(KSEEDAddress, fundingPoolReward);

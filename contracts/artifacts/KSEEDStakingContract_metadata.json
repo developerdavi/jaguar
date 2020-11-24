@@ -640,11 +640,11 @@
 			]
 		},
 		"localhost/contracts/KSEEDStaking.sol": {
-			"keccak256": "0x9483153bdea006c904697e89cd02cd48448a170d4ec58d0cb02cefdd670f2c45",
+			"keccak256": "0x48a188c7bb847f703c231e5645408c67d033b6a059771c915cbf7368809f9d3b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://18f523c87f42df70e21732df5d70c0a85606f084aead2dfbbbbddafdaa254108",
-				"dweb:/ipfs/QmQSKANrWKv3DfTdkPmJXtA9uP2fcEwTPMF9uJLBzBwuZZ"
+				"bzz-raw://4ee211108a09b6aba29740ef63f58d17e1cd52d548225aec11619cb8842357f6",
+				"dweb:/ipfs/QmRtz9qSPkmuM7vtZ6fsnzrw7myWtv1F3q4biz22D9WN5Z"
 			]
 		}
 	},
