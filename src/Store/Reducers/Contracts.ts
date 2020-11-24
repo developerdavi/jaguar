@@ -1,22 +1,45 @@
 import { Reducer } from 'redux';
+import { Contract } from 'web3-eth-contract';
 
-export interface IContracts {
-  [key: string]: unknown;
-  jaguarToken?: unknown;
-  kseedToken?: unknown;
-  kseedStakingContract?: unknown;
-  ethStakingContract?: unknown;
-}
-
-const contracts: Reducer = (state: IContracts = {}, action) => {
-  const name = action.name as string;
+const kseedToken: Reducer = (state: Contract, action) => {
   switch (action.type) {
-    case 'ADD_CONTRACT':
-      state[name] = action.contract;
-      return state;
+    case 'SET_KSEED_TOKEN':
+      return action.contract;
     default:
-      return state;
+      return state || {};
   }
 };
 
-export default contracts;
+const jaguarToken: Reducer = (state: Contract, action) => {
+  switch (action.type) {
+    case 'SET_JAGUAR_TOKEN':
+      return action.contract;
+    default:
+      return state || {};
+  }
+};
+
+const kseedStaking: Reducer = (state: Contract, action) => {
+  switch (action.type) {
+    case 'SET_KSEED_STAKING_TOKEN':
+      return action.contract;
+    default:
+      return state || {};
+  }
+};
+
+const ethStaking: Reducer = (state: Contract, action) => {
+  switch (action.type) {
+    case 'SET_KSEED_TOKEN':
+      return action.contract;
+    default:
+      return state || {};
+  }
+};
+
+export default {
+  kseedToken,
+  jaguarToken,
+  kseedStaking,
+  ethStaking
+};
