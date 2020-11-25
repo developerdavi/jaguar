@@ -2,7 +2,6 @@ import { Reducer } from 'redux';
 
 const DEFAULT_STATE = {
   eth: 0,
-  kseed: 0,
   jaguar: 0
 };
 
