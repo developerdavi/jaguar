@@ -3,9 +3,8 @@ import Web3 from 'web3';
 import store from '../Store';
 import { AbiItem } from '../types';
 
-import kseedToken from '../Assets/artifacts/KSEEDToken.json';
 import jaguarToken from '../Assets/artifacts/JaguarToken.json';
-import kseedStaking from '../Assets/artifacts/KSEEDStakingContract.json';
+import stakingContract from '../Assets/artifacts/StakingContract.json';
 
 export default async function loadEverything(): Promise<void> {
   const web3: Web3 = new Web3(window.ethereum);
@@ -35,10 +34,10 @@ export default async function loadEverything(): Promise<void> {
     process.env.REACT_APP_JAGUAR_TOKEN,
     jaguarToken.abi
   );
-  addContract('KSEED_TOKEN', process.env.REACT_APP_KSEED_TOKEN, kseedToken.abi);
+
   addContract(
-    'KSEED_STAKING_TOKEN',
-    process.env.REACT_APP_KSEED_STAKING_TOKEN,
-    kseedStaking.abi
+    'ETH_STAKING_TOKEN',
+    process.env.REACT_APP_ETH_STAKING,
+    stakingContract.abi
   );
 }
