@@ -104,7 +104,9 @@ const StakingPage: React.FC = () => {
   };
 
   const handleWithdrawal = async () => {
-    await stakingContract.methods.withdraw(toWei(withdrawValue)).call();
+    await stakingContract.methods.withdraw(toWei(withdrawValue)).send({
+      from: accounts[0]
+    });
   };
 
   const handleClaimRewards = async () => {
