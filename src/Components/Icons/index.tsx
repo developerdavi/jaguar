@@ -2,7 +2,7 @@ import React, { ReactElement, useEffect, useState } from 'react';
 
 import { Container } from './styles';
 
-type icons = 'jaguar' | 'jaguar-black' | 'kseed';
+type icons = 'jaguar' | 'jaguar-black' | 'eth';
 
 interface IProps {
   icon: icons;

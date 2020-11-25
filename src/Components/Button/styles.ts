@@ -5,6 +5,14 @@ interface IButton {
   borderColor?: string;
 }
 
+export const ButtonGroup = styled.div`
+  display: inline;
+
+  > button:not(:last-of-type) {
+    margin-right: 10px;
+  }
+`;
+
 export const Container = styled.button<IButton>`
   padding: 5px 15px;
   border-radius: 20px;

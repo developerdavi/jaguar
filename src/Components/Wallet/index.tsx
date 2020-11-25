@@ -16,7 +16,6 @@ const Wallet = (): ReactElement => {
   /**
    * Contracts
    */
-  const kseedToken: Contract = useSelector((x: RootStateOrAny) => x.kseedToken);
   const jaguarToken: Contract = useSelector(
     (x: RootStateOrAny) => x.jaguarToken
   );
@@ -39,15 +38,15 @@ const Wallet = (): ReactElement => {
   };
 
   useEffect(() => {
-    if (kseedToken.methods && jaguarToken.methods) {
+    if (jaguarToken.methods) {
       (async () => {
-        const kseed = await kseedToken.methods.balanceOf(accounts[0]).call();
         const jaguar = await jaguarToken.methods.balanceOf(accounts[0]).call();
-        dispatch({ type: 'SET_BALANCES', balances: { kseed, jaguar } });
+        const eth = await web3.eth.getBalance(accounts[0]);
+        dispatch({ type: 'SET_BALANCES', balances: { jaguar, eth } });
         setLoading(false);
       })();
     }
-  }, [kseedToken.methods]);
+  }, [jaguarToken]);
 
   return (
     <WarningContainer>
@@ -61,7 +60,7 @@ const Wallet = (): ReactElement => {
                 <Icons icon="jaguar-black" /> {parseAmount(balances.jaguar)}
               </span>
               <span>
-                <Icons icon="kseed" /> {parseAmount(balances.kseed)}
+                <Icons icon="eth" /> {parseAmount(balances.eth)}
               </span>
             </>
           )}
