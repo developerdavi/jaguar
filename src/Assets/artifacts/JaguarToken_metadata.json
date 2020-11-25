@@ -408,11 +408,11 @@
 			]
 		},
 		"localhost/contracts/JaguarToken.sol": {
-			"keccak256": "0xcca01102305b14cc5a39b5a79b74a1668461ef46ee4c3c271a11dfb1d5309d31",
+			"keccak256": "0xdc5dc306a8aa857f6fdee8a5f3664c42ded455a2b92428dcffc28d0e65448330",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bee891e13bb3d385840dd1932f6fff3c04fdb9a8623d4ffd73f9505ecfe41157",
-				"dweb:/ipfs/QmYWYnvLt6CS3G3WdJrRiVJq5LN5Z5nsMh3SJQwq2UR5tb"
+				"bzz-raw://c001c0365b49f590f82ce27601550abee7613a8478561ddaee0d177de53bea35",
+				"dweb:/ipfs/QmaykKvDaRCU6QTNTJmsmu6aUKK9s5NAcbUgacUWhU9bco"
 			]
 		}
 	},

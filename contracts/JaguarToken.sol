@@ -9,7 +9,6 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 /**
  * @title JaguarToken
- * @
  */
 contract JaguarToken is ERC20 {
   using SafeERC20 for IERC20;
